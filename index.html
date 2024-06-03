@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>calculator</title>
+    <script>
+      function handleDarkMode() {
+        document.querySelector("html").classList.toggle("dark");
+      }
+    </script>
+    <style>
+      .custom_gradient:is(.dark *) {
+        background: #000000;
+      }
+      .custom_gradient {
+        background: linear-gradient(
+          151deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(165, 168, 169, 0.7988445378151261) 55%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="max-w-7xl mx-auto h-[680px] pt-10 pb-10">
+      <div
+        class="pb-14"
+        style="background: linear-gradient(to right, white, #caf4ff, white)"
+      >
+        <button
+          onclick="handleDarkMode()"
+          type="button"
+          class="border border-black rounded-full px-4 py-3"
+        >
+          Dark mode
+        </button>
+        <div class="h-[790px] w-[375px] rounded-3xl mx-auto custom_gradient">
+          <div class="">
+            <div
+              class="mt-8 mb-16 w-[345px] h-[135px] text-end rounded-3xl pr-4 text-4xl"
+            >
+              <p class="text-[#818181] text-base font-normal pt-28 pb-[15px]">
+                6000 <span class="text-[#109DFF]">/</span>2
+                <span class="text-[#109DFF]">+</span> 3227
+                <span class="text-[#109DFF]">*</span>2
+              </p>
+
+              <p
+                class="text-5xl text-[#424242] dark:text-white font-medium overflow-hidden"
+              >
+                =12,454
+              </p>
+            </div>
+
+            <div class="max-w-[325px] mx-auto">
+              <div class="pt-20 font-bold max-w-[325px] mx-auto">
+                <button
+                  class="h-[40px] w-[62px] mx-2 my-2 text-base border border-white rounded-full font-normal text-white bg-[#ceced0] dark:border-[#303136] dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                >
+                  e
+                </button>
+
+                <button
+                  class="h-[40px] w-[62px] mx-2 my-2 text-base border border-white rounded-full font-normal text-white bg-[#ceced0] dark:border-[#303136] dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                >
+                  µ
+                </button>
+
+                <button
+                  class="h-[40px] w-[62px] mx-2 my-2 text-base border border-white rounded-full font-normal text-white bg-[#ceced0] dark:border-[#303136] dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                >
+                  sin
+                </button>
+
+                <button
+                  class="h-[40px] w-[62px] mx-2 my-2 text-base border border-white rounded-full font-normal text-white bg-[#ceced0] dark:border-[#303136] dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                >
+                  deg
+                </button>
+              </div>
+              <div class="mt-4 font-bold flex items-center jus">
+                <button
+                  id="ac"
+                  value="Ac"
+                  class="mx-2 my-1 h-[60px] w-[62px] font-medium text-3xl border border-white rounded-xl text-[#9a9b9c] bg-[#ceced0] dark:border-[#303136] dark:text-[#A5A5A5] dark:bg-[#616161] bg-opacity-70 shadow"
+                >
+                  Ac
+                </button>
+
+                <button
+                  value=""
+                  class="h-[58px] w-[60px] mx-3 text-4xl flex items-center justify-center text-center rounded-xl font-medium border border-white text-[#8c8d8f] bg-[#ceced0] dark:text-[#A5A5A5] dark:border-[#303136] dark:bg-[#616161] bg-opacity-70 shadow"
+                >
+                  <ion-icon name="backspace-outline"></ion-icon>
+                </button>
+
+                <button
+                  value="/"
+                  class="h-[60px] w-[62px] mx-2 my-2 text-2xl border border-white rounded-xl text-[#5d89b3] bg-[#a4c2de] dark:border-[#303136] dark:text-[#B2DAFF] dark:bg-[#005DB2] transform-all 0.2s ease-in-out shadow"
+                >
+                  /
+                </button>
+
+                <button
+                  value="*"
+                  class="h-[60px] w-[62px] mx-3 my-2 text-3xl border border-white rounded-xl text-[#5d89b3] bg-[#a4c2de] dark:border-[#303136] dark:text-[#B2DAFF] dark:bg-[#005DB2] transform-all 0.2s ease-in-out shadow"
+                >
+                  *
+                </button>
+              </div>
+
+              <div class="pt-2 font-bold">
+                <button
+                  value="7"
+                  class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                >
+                  7
+                </button>
+                <button
+                  value="8"
+                  class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                >
+                  8
+                </button>
+
+                <button
+                  value="9"
+                  class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                >
+                  9
+                </button>
+
+                <button
+                  value="-"
+                  class="h-[60px] w-[62px] mx-2 my-2 text-3xl font-normal border border-white rounded-xl text-[#5d89b3] bg-[#a4c2de] dark:border-[#303136] dark:text-[#B2DAFF] dark:bg-[#005DB2] transform-all 0.2s ease-in-out shadow"
+                >
+                  -
+                </button>
+              </div>
+
+              <div class="pt-2 font-bold relative">
+                <div>
+                  <button
+                    value="4"
+                    class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                  >
+                    4
+                  </button>
+
+                  <button
+                    value="5"
+                    class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                  >
+                    5
+                  </button>
+
+                  <button
+                    value="6"
+                    class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadow"
+                  >
+                    6
+                  </button>
+
+                  <button
+                    value="+"
+                    class="h-[110px] w-[62px] text-3xl mx-2 my-2 border border-white rounded-xl text-[#5d89b3] bg-[#a4c2de] dark:border-[#303136] dark:text-[#B2DAFF] dark:bg-[#005DB2] transform-all 0.2s ease-in-out shadow absolute bottom-[128px] right-[0]"
+                  >
+                    +
+                  </button>
+                </div>
+
+                <div class="pt-2">
+                  <button
+                    value="1"
+                    class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadoww"
+                  >
+                    1
+                  </button>
+
+                  <button
+                    value="2"
+                    class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadoww"
+                  >
+                    2
+                  </button>
+
+                  <button
+                    value="3"
+                    class="h-[60px] w-[62px] mx-2 my-2 text-[32px] font-normal border border-white text-white bg-[#ceced0] dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadoww"
+                  >
+                    3
+                  </button>
+                </div>
+
+                <div class="mt-4 font-bold relative">
+                  <button
+                    value="0"
+                    class="h-[60px] w-[143px] mx-2 my-2 text-[32px] font-normal border border-white rounded-xl text-white bg-[#ceced0] dark:border-[#303136] dark:text-[#29A8FF] dark:bg-[#303136] bg-opacity-70 shadoww"
+                  >
+                    0
+                  </button>
+
+                  <button
+                    value="."
+                    class="h-[60px] w-[62px] mx-2 my-2 inline-flex items-center justify-center text-center text-[32px] font-mediume border border-white dark:border-[#303136] rounded-xl dark:text-[#29A8FF] dark:bg-[#303136] text-white bg-[#ceced0] bg-opacity-70 shadow"
+                  >
+                    .
+                  </button>
+                  <button
+                    id="eval"
+                    value="="
+                    class="h-[110px] w-[62px] text-3xl mx-2 my-2 border border-white rounded-xl text-[#5d89b3] bg-[#a4c2de] dark:border-[#303136] dark:text-[#B2DAFF] dark:bg-[#005DB2] transform-all 0.2s ease-in-out shadow absolute bottom-0 right-[0]"
+                  >
+                    =
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
